@@ -1,12 +1,12 @@
 /* Global Reset and Variables */
 :root {
-    --primary: #DCFF50;          /* CRED-inspired neon accent */
-    --dark: #0A0B0D;             /* Deep background */
-    --darker: #000000;           /* Darker elements */
-    --light: #FFFFFF;            /* Text and highlights */
-    --gray: #8A8F98;             /* Secondary text */
-    --card-bg: #131517;          /* Card backgrounds */
-    --gradient: linear-gradient(135deg, rgba(220, 255, 80, 0.1), rgba(220, 255, 80, 0.05));
+    --primary: #00ADB5;          /* Turquoise */
+    --dark: #222831;             /* Dark Gunmetal */
+    --darker: #393E46;           /* Gunmetal */
+    --light: #EEEEEE;            /* Cultured */
+    --gray: #393E46;             /* Secondary text */
+    --card-bg: #222831;          /* Card backgrounds */
+    --gradient: linear-gradient(135deg, rgba(0, 173, 181, 0.1), rgba(34, 40, 49, 0.05));
 }
 
 * {
@@ -32,7 +32,7 @@ nav {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(10, 11, 13, 0.95);
+    background: rgba(34, 40, 49, 0.95);
     backdrop-filter: blur(10px);
 }
 .logo-container {
@@ -207,7 +207,7 @@ nav a:hover {
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary);
-    text-shadow: 0 0 10px rgba(220, 255, 80, 0.3);
+    text-shadow: 0 0 10px rgba(0, 173, 181, 0.3);
 }
 
 .project-info {
@@ -367,7 +367,7 @@ nav a:hover {
     transform: scale(1);
     opacity: 1;
     filter: blur(0);
-    background: rgba(19, 21, 23, 0.95);
+    background: rgba(34, 40, 49, 0.95);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
