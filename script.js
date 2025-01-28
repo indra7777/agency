@@ -1,3 +1,80 @@
+// Create and style overlay
+const overlay = document.createElement('div');
+overlay.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+`;
+
+// Create logo container
+const logoContainer = document.createElement('div');
+logoContainer.style.cssText = `
+    display: flex;
+    align-items: center;
+    transform: scale(0.1);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+`;
+
+// Create and style logo image
+const logoImg = document.createElement('img');
+logoImg.src = './public/ck.jpeg';
+logoImg.style.cssText = `
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+`;
+
+// Create and style logo text
+const logoText = document.createElement('div');
+logoText.textContent = 'CoderKraft';
+logoText.style.cssText = `
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-left: 0.5rem;
+`;
+
+// Append elements
+logoContainer.appendChild(logoImg);
+logoContainer.appendChild(logoText);
+overlay.appendChild(logoContainer);
+document.body.appendChild(overlay);
+
+// Zoom in animation
+setTimeout(() => {
+    logoContainer.style.opacity = '1';
+    logoContainer.style.transform = 'scale(2)';
+}, 100);
+
+// Hold at zoomed in state
+setTimeout(() => {
+    logoContainer.style.transform = 'scale(2)';
+}, 1500);
+
+// Zoom out animation
+setTimeout(() => {
+    logoContainer.style.transform = 'scale(0.1)';
+    logoContainer.style.opacity = '0';
+}, 2000);
+
+// Remove overlay
+setTimeout(() => {
+    overlay.style.opacity = '0';
+    setTimeout(() => overlay.remove(), 500);
+}, 2500);
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize AOS
     AOS.init({
