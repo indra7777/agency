@@ -127,3 +127,25 @@ document.addEventListener('DOMContentLoaded', () => {
         projectObserver.observe(card);
     });
 }); 
+
+// Contact form handling
+const contactForm = document.querySelector('#contact form');
+
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = {
+        name: contactForm.querySelector('input[type="text"]').value,
+        email: contactForm.querySelector('input[type="email"]').value, 
+        message: contactForm.querySelector('textarea').value
+    };
+
+    // Create mailto link
+    const mailtoLink = `mailto:coderkraft@gmail.com?subject=Contact from ${formData.name}&body=From: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+
+    // Open default mail client
+    window.location.href = mailtoLink;
+
+    // Reset form
+    contactForm.reset();
+});

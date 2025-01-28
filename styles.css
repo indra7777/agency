@@ -35,11 +35,27 @@ nav {
     background: rgba(10, 11, 13, 0.95);
     backdrop-filter: blur(10px);
 }
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.logo-bg {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    opacity: 1;
+    margin-right: 0.5rem;
+}
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary);
+    margin-left: 0.5rem;
 }
 
 nav ul {
